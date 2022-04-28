@@ -35,6 +35,7 @@ exports.handler = async (event, context) => {
       cookies: [],
       isBase64Encoded: true,
       statusCode: 200,
+      headers: { "content-type": "application/octet-stream" },
       body: response.data,
     };
   }
