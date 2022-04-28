@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
 
     // Get image from internet
     var response = await axios.get(imageSource, {
-      responseType: "blob",
+      responseType: "arraybuffer",
     });
 
     return {
@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
       isBase64Encoded: true,
       statusCode: 200,
       headers: { "content-type": "application/octet-stream" },
-      body: response.data,
+      body: Buffer.from(response.data, "binary").toString("base64"),
     };
   }
 };
