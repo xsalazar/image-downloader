@@ -1,6 +1,9 @@
 name: Deploy Application
 
 on:
+  push:
+    paths:
+      - "app/**"
   workflow_dispatch:
 
 jobs:
@@ -27,7 +30,7 @@ jobs:
 
       - name: Terraform Init ✨
         id: init
-        run: terraform init
+        run: terraform init -upgrade
         working-directory: ./terraform
 
       - name: Terraform Apply 🚀
@@ -42,7 +45,7 @@ jobs:
       - name: Setup Node 🏗
         uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: "16"
 
       - name: Install packages 📀
         run: npm ci
