@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "hediet.vscode-drawio",
-    "hashicorp.terraform"
-  ]
+  "recommendations": ["hediet.vscode-drawio"]
 }
