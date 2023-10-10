@@ -1,3 +1,6 @@
+> **Warning**
+> This repository has been archived as Google is now properly returning CORS headers and this workaround is no longer necessary.
+
 # 💿 Image Downloader
 
 This repository holds both the Terraform infrastructure code as well as the simple Javascript application that runs inside the AWS Lambda function.
